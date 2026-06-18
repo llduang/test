@@ -82,31 +82,31 @@ const PRODUCT_DETAILS = [
     icon: Layers,
     title: "整体保温结构",
     desc: "采用航空级铝保温板，六面整体保温，360°全封闭锁温设计。冬季保温时间提升70%，夏季隔绝外部高温，让沐浴环境始终恒温舒适。独特的双层中空结构不仅有效阻隔热量流失，还能降低噪音传播，营造静谧私享空间。",
-    image: "/images/products/product-01.png",
+    image: "/images/products/product-01.webp",
   },
   {
     icon: Frame,
     title: "加厚铝合金框架",
     desc: "1.6mm加厚航空铝合金框架，硬度高、韧性强、永不生锈。表面经过阳极氧化处理，耐腐蚀、抗磨损。框架承重测试达500KG，结构稳固不摇晃，长期使用依然保持挺括如新。多种颜色可选，适配不同浴室风格。",
-    image: "/images/products/product-02.png",
+    image: "/images/products/product-02.webp",
   },
   {
     icon: GlassWater,
     title: "6mm磨砂3C钢化玻璃",
     desc: "采用国家标准3C认证的6mm钢化玻璃，磨砂工艺保护隐私同时透光柔和。抗冲击强度是普通玻璃的5倍，破碎后形成颗粒状不伤人。配备防爆膜，双重保障家人安全。门把手、铰链等五金件均采用304不锈钢精铸。",
-    image: "/images/products/product-03.png",
+    image: "/images/products/product-03.webp",
   },
   {
     icon: Wind,
     title: "智能暖风空调",
     desc: "内置PDC陶瓷发热模块，无明火、无氧耗、安全高效。三档温度自由调节（25℃-45℃），3秒速热，3分钟即可让整个洗澡房达到舒适温度。配备智能恒温系统，自动维持设定温度，省电节能。还具备换气、除湿、香薰等多功能模式。",
-    image: "/images/products/product-04.png",
+    image: "/images/products/product-04.webp",
   },
   {
     icon: ShowerHead,
     title: "全铜混水系统",
     desc: "全铜锻造混水阀芯，配以进口陶瓷片密封，开合百万次滴水不漏。精准控温±0.5℃，避免忽冷忽热。顶喷、手持、下出水三路分水设计，一键切换。淋浴管路采用食品级PEX材质，无毒无味，水质安全有保障。",
-    image: "/images/products/product-05.png",
+    image: "/images/products/product-05.webp",
   },
 ];
 
@@ -120,22 +120,22 @@ const ACCESSORIES = [
 
 const SCENES = [
   {
-    image: "/images/scenes/scene-01.png",
+    image: "/images/scenes/scene-01.webp",
     title: "家庭住宅",
     desc: "适配城市公寓、自建房、别墅等多种住宅户型，干湿分离设计让浴室整洁易打理。",
   },
   {
-    image: "/images/scenes/scene-02.png",
+    image: "/images/scenes/scene-02.webp",
     title: "民宿客栈",
     desc: "为高端民宿打造差异化体验，恒温洗澡房提升住客满意度，冬季也能舒适沐浴。",
   },
   {
-    image: "/images/scenes/scene-03.png",
+    image: "/images/scenes/scene-03.webp",
     title: "星级酒店",
     desc: "符合星级酒店品质要求，简洁现代的外观设计融入各类装修风格。",
   },
   {
-    image: "/images/scenes/scene-04.png",
+    image: "/images/scenes/scene-04.webp",
     title: "养老院/工程项目",
     desc: "为老年人提供恒温安全沐浴环境，杜绝冬季洗澡受寒风险。也是工程项目批量集采的优选。",
   },
@@ -145,7 +145,7 @@ const MODELS = [
   {
     name: "经典款 BL-X100",
     size: "108 × 124 cm",
-    image: "/images/promo/promo-04.png",
+    image: "/images/promo/promo-04.webp",
     tagline: "极简之美 · 尽显品质",
     features: [
       "铝保温板六面整体保温",
@@ -161,7 +161,7 @@ const MODELS = [
   {
     name: "尊享款 BL-X300",
     size: "130 × 156 cm",
-    image: "/images/promo/promo-03.png",
+    image: "/images/promo/promo-03.webp",
     tagline: "极简美学 · 智享舒适",
     features: [
       "整体保温+静音设计",
@@ -178,7 +178,7 @@ const MODELS = [
   {
     name: "尊享款 BL-X300P",
     size: "130 × 156 cm（含马桶）",
-    image: "/images/promo/promo-06.png",
+    image: "/images/promo/promo-06.webp",
     tagline: "极简之境 · 奢享空间",
     features: [
       "整体保温+静音设计",
@@ -195,35 +195,35 @@ const MODELS = [
 ];
 
 const PROMOS = [
-  { image: "/images/promo/promo-01.png", title: "极简美学 · 定制高端生活" },
-  { image: "/images/promo/promo-02.png", title: "极简之境 · 净享未来" },
-  { image: "/images/promo/promo-03.png", title: "极简美学 · 智享舒适" },
-  { image: "/images/promo/promo-04.png", title: "极简之美 · 尽显品质" },
-  { image: "/images/promo/promo-05.png", title: "极简之境 · 净享未来" },
-  { image: "/images/promo/promo-06.png", title: "极简之境 · 奢享空间" },
+  { image: "/images/promo/promo-01.webp", title: "极简美学 · 定制高端生活" },
+  { image: "/images/promo/promo-02.webp", title: "极简之境 · 净享未来" },
+  { image: "/images/promo/promo-03.webp", title: "极简美学 · 智享舒适" },
+  { image: "/images/promo/promo-04.webp", title: "极简之美 · 尽显品质" },
+  { image: "/images/promo/promo-05.webp", title: "极简之境 · 净享未来" },
+  { image: "/images/promo/promo-06.webp", title: "极简之境 · 奢享空间" },
 ];
 
 const PRODUCT_GALLERY = [
-  "/images/products/product-01.png",
-  "/images/products/product-02.png",
-  "/images/products/product-03.png",
-  "/images/products/product-04.png",
-  "/images/products/product-05.png",
-  "/images/products/product-06.png",
-  "/images/products/product-07.png",
-  "/images/products/product-08.png",
-  "/images/products/product-09.png",
-  "/images/products/product-10.png",
+  "/images/products/product-01.webp",
+  "/images/products/product-02.webp",
+  "/images/products/product-03.webp",
+  "/images/products/product-04.webp",
+  "/images/products/product-05.webp",
+  "/images/products/product-06.webp",
+  "/images/products/product-07.webp",
+  "/images/products/product-08.webp",
+  "/images/products/product-09.webp",
+  "/images/products/product-10.webp",
 ];
 
 const STRENGTH_ITEMS = [
   {
-    image: "/images/strength/strength-01.png",
+    image: "/images/strength/strength-01.webp",
     title: "汽车碾压测试",
     desc: "让一辆小型货车的前轮直接碾压洗澡房底座，底座保持完好无损，承重能力远超日常使用需求。这一极限测试印证了产品在结构强度上的卓越表现，让每一位用户都能放心使用。",
   },
   {
-    image: "/images/strength/strength-02.png",
+    image: "/images/strength/strength-02.webp",
     title: "人体承重测试",
     desc: "洗澡房底座由叉车支撑悬空，一名成年人站立其上而不发生任何形变或松动。底座采用高强度铝合金一体成型，结合加强筋结构设计，承重能力达500KG以上，确保长期使用安全无虞。",
   },
@@ -345,7 +345,7 @@ function Hero() {
       {/* 背景图 */}
       <div className="absolute inset-0">
         <img
-          src="/images/scenes/scene-01.png"
+          src="/images/scenes/scene-01.webp"
           alt="BATHLUXE 沐浴房高端浴室场景"
           className="w-full h-full object-cover"
         />
