@@ -52,3 +52,19 @@ prompt
 server.log
 # Skills directory
 /skills/
+# 上传素材原始文件（不进入仓库）
+/upload/
+/skills/
+/.zscripts/
+/db/custom.db
+/examples/
+/mini-services/
+/prisma/
+/Caddyfile
+
+# 本地构建/截图/下载产物
+/scripts/*.png
+/scripts/*.log
+/download/
+/mini-services/
+.env
