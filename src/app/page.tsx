@@ -23,7 +23,6 @@ import {
   MessageCircle,
   QrCode,
   MapPin,
-  Mail,
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
@@ -143,7 +142,8 @@ const SCENES = [
 
 const QUALITY_SIZES = [
   { size: "90 × 90 cm（扇形）", price: "¥ 1,350" },
-  { size: "100 × 100 cm", price: "¥ 1,150" },
+  { size: "100 × 100 cm（扇形）", price: "¥ 1,350" },
+  { size: "100 × 100 cm（方形）", price: "¥ 1,150" },
   { size: "100 × 120 cm", price: "¥ 1,250" },
   { size: "100 × 140 cm", price: "¥ 1,500" },
   { size: "130 × 155 cm", price: "¥ 1,700" },
@@ -236,8 +236,7 @@ const CONTACT = {
   phone: "150-7669-9400", // 真实电话
   mobile: "150-7669-9400", // 真实手机号（微信同号）
   wechat: "15076699400", // 微信号（同手机号）
-  email: "service@bathluxe.com",
-  address: "广东省佛山市南海区狮山镇科技工业园A区58号",
+  address: "河北省沧州市沧县",
   workTime: "周一至周日 8:00 - 22:00",
 };
 
@@ -559,9 +558,9 @@ function ProductDetails() {
                   </p>
                   <ul className="space-y-2 text-sm text-neutral-700">
                     {[
-                      "国家3C认证品质保障",
-                      "30年以上使用寿命",
-                      "全国联保 · 终身维护",
+                      "30年以上板材使用寿命",
+                      "稳固耐用 · 安全可靠",
+                      "支持上门测量与安装",
                     ].map((feat, j) => (
                       <li key={j} className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-neutral-900" />
@@ -754,7 +753,7 @@ function Models() {
           ))}
         </div>
         <div className="text-center mt-10 text-sm text-neutral-500">
-          * 以上价格为参考价，实际报价以测量定制为准。支持全国上门测量与安装。
+          * 以上价格为参考价，实际报价以测量定制为准。支持上门测量与安装。
         </div>
       </div>
     </section>
@@ -918,7 +917,7 @@ function Contact() {
             联系我们
           </h2>
           <p className="text-base md:text-lg text-neutral-400 max-w-2xl mx-auto">
-            专业顾问1对1服务，全国上门测量安装。立即咨询，享受限时优惠。
+            专业顾问1对1服务，上门测量安装。立即咨询，享受限时优惠。
           </p>
         </div>
 
@@ -978,18 +977,6 @@ function Contact() {
                   </div>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4 p-5 bg-neutral-800/50 border border-neutral-700">
-                <div className="w-12 h-12 rounded-full bg-white text-neutral-900 grid place-items-center shrink-0">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs text-neutral-400 mb-1">
-                    售后邮箱
-                  </div>
-                  <div className="text-sm font-medium">{CONTACT.email}</div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -1024,26 +1011,6 @@ function Contact() {
                   </div>
                 );
               })}
-            </div>
-            <div className="mt-6 p-4 bg-neutral-800/50 border border-neutral-700 text-xs text-neutral-400 leading-relaxed">
-              <strong className="text-neutral-200">提示：</strong>
-              上方二维码为占位示例，请在部署前将{" "}
-              <code className="bg-neutral-800 px-1.5 py-0.5 rounded text-neutral-200">
-                public/images/qr/
-              </code>{" "}
-              目录下的{" "}
-              <code className="bg-neutral-800 px-1.5 py-0.5 rounded text-neutral-200">
-                wechat-qr.png
-              </code>
-              、{" "}
-              <code className="bg-neutral-800 px-1.5 py-0.5 rounded text-neutral-200">
-                douyin-qr.png
-              </code>
-              、{" "}
-              <code className="bg-neutral-800 px-1.5 py-0.5 rounded text-neutral-200">
-                xiaohongshu-qr.png
-              </code>{" "}
-              替换为您的真实二维码图片。
             </div>
           </div>
         </div>
@@ -1123,10 +1090,6 @@ function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
                 {CONTACT.address}
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5" />
-                {CONTACT.email}
               </li>
             </ul>
           </div>
