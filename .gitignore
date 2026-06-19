@@ -68,3 +68,5 @@ server.log
 /download/
 /mini-services/
 .env
+scripts/*.png
+scripts/*.log

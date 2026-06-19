@@ -67,8 +67,8 @@ const ADVANTAGES = [
   },
   {
     icon: Shield,
-    title: "500KG承重",
-    desc: "加厚铝合金框架结构，承重力强，稳固耐用，安全有保障。",
+    title: "500公斤以上承重",
+    desc: "高强度框架结构，底盘承重500公斤以上，稳固耐用，安全有保障。",
   },
   {
     icon: Award,
@@ -86,8 +86,8 @@ const PRODUCT_DETAILS = [
   },
   {
     icon: Frame,
-    title: "加厚铝合金框架",
-    desc: "1.6mm加厚航空铝合金框架，硬度高、韧性强、永不生锈。表面经过阳极氧化处理，耐腐蚀、抗磨损。框架承重测试达500KG，结构稳固不摇晃，长期使用依然保持挺括如新。多种颜色可选，适配不同浴室风格。",
+    title: "高强度框架结构",
+    desc: "高端款采用断桥门设计，主体使用PUR大板板材，结构致密、抗压性强、保温隔热性能优异。底盘经叉车悬空承重测试，成年人站立其上无任何形变，承重能力达500公斤以上，板材使用寿命长达30年。表面经过防腐处理，长期使用依然稳固如新。",
     image: "/images/products/product-02.webp",
   },
   {
@@ -141,56 +141,58 @@ const SCENES = [
   },
 ];
 
+const QUALITY_SIZES = [
+  { size: "90 × 90 cm（扇形）", price: "¥ 1,350" },
+  { size: "100 × 100 cm", price: "¥ 1,150" },
+  { size: "100 × 120 cm", price: "¥ 1,250" },
+  { size: "100 × 140 cm", price: "¥ 1,500" },
+  { size: "130 × 155 cm", price: "¥ 1,700" },
+  { size: "120 × 190 cm", price: "¥ 1,900" },
+  { size: "120 × 190 cm（隔断款）", price: "¥ 2,100" },
+];
+
+const PREMIUM_SIZES = [
+  { size: "100 × 100 cm", price: "¥ 1,600" },
+  { size: "100 × 120 cm", price: "¥ 1,750" },
+  { size: "100 × 140 cm", price: "¥ 1,900" },
+  { size: "130 × 155 cm", price: "¥ 2,100" },
+  { size: "120 × 190 cm", price: "¥ 2,300" },
+];
+
 const MODELS = [
   {
-    name: "经典款 BL-X100",
-    size: "108 × 124 cm",
+    name: "品质款 · 推拉门",
     image: "/images/promo/promo-04.webp",
-    tagline: "极简之美 · 尽显品质",
+    tagline: "极简之美 · 经典实用",
+    desc: "经典推拉门设计，铝合金框架搭配磨砂钢化玻璃，干湿分离，性价比之选。",
     features: [
-      "铝保温板六面整体保温",
+      "铝合金框架结构",
       "6mm磨砂3C钢化玻璃",
-      "加厚铝合金框架",
+      "推拉门设计 · 节省空间",
+      "底盘承重 500 公斤以上",
       "全铜混水分水系统",
-      "智能暖风空调（25-45℃）",
-      "顶喷+手持花洒",
+      "顶喷 + 手持花洒",
     ],
-    price: "¥ 6,980 起",
+    sizes: QUALITY_SIZES,
     highlighted: false,
   },
   {
-    name: "尊享款 BL-X300",
-    size: "130 × 156 cm",
+    name: "高端款 · 断桥门 PUR大板",
     image: "/images/promo/promo-03.webp",
     tagline: "极简美学 · 智享舒适",
+    desc: "新款断桥门设计，主体采用PUR大板板材，保温隔热性能卓越，结构稳固，承重表现优异。",
     features: [
-      "整体保温+静音设计",
-      "6mm磨砂3C钢化玻璃+防爆膜",
-      "1.6mm加厚铝合金框架",
+      "断桥门设计 · PUR大板板材",
+      "6mm磨砂3C钢化玻璃 + 防爆膜",
+      "板材使用寿命 30 年",
+      "底盘承重 500 公斤以上",
       "全铜混水分水系统",
       "智能暖风空调（恒温±0.5℃）",
-      "顶喷+手持+下出水三路分水",
-      "香薰/换气/除湿多功能模式",
+      "顶喷 + 手持 + 下出水三路分水",
+      "香薰 / 换气 / 除湿多功能模式",
     ],
-    price: "¥ 9,880 起",
+    sizes: PREMIUM_SIZES,
     highlighted: true,
-  },
-  {
-    name: "尊享款 BL-X300P",
-    size: "130 × 156 cm（含马桶）",
-    image: "/images/promo/promo-06.webp",
-    tagline: "极简之境 · 奢享空间",
-    features: [
-      "整体保温+静音设计",
-      "6mm磨砂3C钢化玻璃+防爆膜",
-      "1.6mm加厚铝合金框架",
-      "全铜混水分水系统",
-      "智能暖风空调（恒温±0.5℃）",
-      "集成隐藏式马桶+排气系统",
-      "香薰/换气/除湿多功能模式",
-    ],
-    price: "¥ 12,880 起",
-    highlighted: false,
   },
 ];
 
@@ -224,16 +226,16 @@ const STRENGTH_ITEMS = [
   },
   {
     image: "/images/strength/strength-02.webp",
-    title: "人体承重测试",
-    desc: "洗澡房底座由叉车支撑悬空，一名成年人站立其上而不发生任何形变或松动。底座采用高强度铝合金一体成型，结合加强筋结构设计，承重能力达500KG以上，确保长期使用安全无虞。",
+    title: "人体承重测试 · 站上人没事",
+    desc: "洗澡房底座由叉车支撑悬空，一名成年人直接站立其上，底座不发生任何形变或松动，真正「站上人没事」。底盘承重能力达 500 公斤以上，结合加强筋结构设计，确保长期使用安全无虞。",
   },
 ];
 
 /* ==================== 联系信息（用户可在此修改） ==================== */
 const CONTACT = {
-  phone: "400-888-8888", // 修改为您的真实电话
-  mobile: "138-8888-8888", // 修改为您的真实手机号
-  wechat: "BATHLUXE-Official", // 修改为您的微信号
+  phone: "150-7669-9400", // 真实电话
+  mobile: "150-7669-9400", // 真实手机号（微信同号）
+  wechat: "15076699400", // 微信号（同手机号）
   email: "service@bathluxe.com",
   address: "广东省佛山市南海区狮山镇科技工业园A区58号",
   workTime: "周一至周日 8:00 - 22:00",
@@ -356,7 +358,7 @@ function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-32">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs sm:text-sm tracking-wider mb-6 animate-fade-up">
           <Award className="w-3.5 h-3.5" />
-          30年品质承诺 · 500KG承重测试
+          30年品质承诺 · 500公斤以上承重
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 animate-fade-up [animation-delay:100ms] [opacity:0] [animation-fill-mode:forwards]">
           空调保温洗澡房
@@ -365,7 +367,7 @@ function Hero() {
           冬暖夏凉 · 舒适沐浴新体验
         </p>
         <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up [animation-delay:300ms] [opacity:0] [animation-fill-mode:forwards]">
-          3秒速热 · 3分钟升温 · 智能恒温 · 整体保温 · 加厚铝合金框架 · 6mm磨砂3C钢化玻璃 · 全铜混水系统
+          3秒速热 · 3分钟升温 · 智能恒温 · 整体保温 · 高强度框架 · 6mm磨砂3C钢化玻璃 · 全铜混水系统
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up [animation-delay:400ms] [opacity:0] [animation-fill-mode:forwards]">
           <a href="#contact">
@@ -660,58 +662,83 @@ function Models() {
         <SectionHeader
           eyebrow="Product Models"
           title="型号介绍"
-          desc="三款经典型号，覆盖不同家庭需求。从基础到尊享，总有一款适合您。"
+          desc="两大系列、十二种尺寸，覆盖不同家庭与工程需求。从经典推拉门到高端断桥门 PUR 大板，总有一款适合您。"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {MODELS.map((m, i) => (
             <div
               key={i}
-              className={`card-hover bg-white border-2 flex flex-col ${
+              className={`card-hover bg-white border-2 flex flex-col overflow-hidden ${
                 m.highlighted
-                  ? "border-neutral-900 shadow-xl lg:scale-105"
+                  ? "border-neutral-900 shadow-xl"
                   : "border-neutral-200"
               }`}
             >
               {m.highlighted && (
                 <div className="bg-neutral-900 text-white text-center py-2 text-xs tracking-[0.2em] uppercase">
-                  ★ 推荐款 ★
+                  ★ 推荐款 · 新款断桥门 ★
                 </div>
               )}
-              <div className="img-zoom aspect-[4/3] bg-neutral-100">
-                <img
-                  src={m.image}
-                  alt={m.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 md:p-8 flex-1 flex flex-col">
-                <div className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-2">
-                  {m.tagline}
+              <div className="grid grid-cols-1 sm:grid-cols-2">
+                {/* 左侧图片 */}
+                <div className="img-zoom aspect-[4/3] sm:aspect-auto bg-neutral-100">
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black text-neutral-900 mb-1">
-                  {m.name}
-                </h3>
-                <div className="text-sm text-neutral-600 mb-4">
-                  尺寸：{m.size}
-                </div>
-                <ul className="space-y-2 text-sm text-neutral-700 mb-6 flex-1">
-                  {m.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-neutral-900 shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="border-t border-neutral-200 pt-4 flex items-end justify-between">
-                  <div>
-                    <div className="text-xs text-neutral-500 mb-1">参考价</div>
-                    <div className="text-2xl font-black text-neutral-900">
-                      {m.price}
-                    </div>
+                {/* 右侧介绍 */}
+                <div className="p-6 md:p-7 flex flex-col">
+                  <div className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-2">
+                    {m.tagline}
                   </div>
+                  <h3 className="text-xl md:text-2xl font-black text-neutral-900 mb-2 leading-tight">
+                    {m.name}
+                  </h3>
+                  <p className="text-xs text-neutral-600 leading-relaxed mb-4">
+                    {m.desc}
+                  </p>
+                  <ul className="space-y-1.5 text-xs text-neutral-700 mb-4 flex-1">
+                    {m.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 text-neutral-900 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* 尺寸价格表 */}
+              <div className="border-t border-neutral-200 bg-neutral-50/50">
+                <div className="px-6 md:px-7 py-3 flex items-center justify-between">
+                  <div className="text-xs font-bold tracking-[0.15em] uppercase text-neutral-700">
+                    尺寸 / 参考价
+                  </div>
+                  <div className="text-[10px] text-neutral-500">
+                    共 {m.sizes.length} 种尺寸
+                  </div>
+                </div>
+                <div className="px-6 md:px-7 pb-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {m.sizes.map((s, j) => (
+                      <div
+                        key={j}
+                        className="flex items-center justify-between px-3 py-2 bg-white border border-neutral-200 text-xs"
+                      >
+                        <span className="text-neutral-700">{s.size}</span>
+                        <span className="font-black text-neutral-900">
+                          {s.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-6 md:px-7 pb-5">
                   <a href="#contact">
                     <Button
-                      className={`rounded-none ${
+                      className={`w-full rounded-none ${
                         m.highlighted
                           ? "bg-neutral-900 hover:bg-neutral-700 text-white"
                           : "bg-white border border-neutral-900 text-neutral-900 hover:bg-neutral-100"
@@ -1055,17 +1082,17 @@ function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#models" className="hover:text-white transition">
-                  经典款 BL-X100
+                  品质款 · 推拉门
                 </a>
               </li>
               <li>
                 <a href="#models" className="hover:text-white transition">
-                  尊享款 BL-X300
+                  高端款 · 断桥门 PUR大板
                 </a>
               </li>
               <li>
                 <a href="#models" className="hover:text-white transition">
-                  尊享款 BL-X300P（含马桶）
+                  隔断款（120×190）
                 </a>
               </li>
               <li>
