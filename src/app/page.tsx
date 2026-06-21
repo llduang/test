@@ -50,6 +50,7 @@ const NAV_LINKS = [
   { label: "强度演示", href: "#strength" },
   { label: "型号介绍", href: "#models" },
   { label: "应用场景", href: "#scenes" },
+  { label: "热水器福利", href: "#heater-offer" },
   { label: "联系我们", href: "#contact" },
 ];
 
@@ -164,9 +165,9 @@ const MODELS = [
     name: "品质款 · 推拉门",
     image: "/images/promo/promo-04.webp",
     tagline: "极简之美 · 经典实用",
-    desc: "经典推拉门设计，铝合金框架搭配磨砂钢化玻璃，干湿分离，性价比之选。",
+    desc: "经典推拉门设计，铅复合保温板搭配磨砂钢化玻璃，干湿分离，性价比之选。",
     features: [
-      "铝合金框架结构",
+      "铅复合保温板框架",
       "6mm磨砂3C钢化玻璃",
       "推拉门设计 · 节省空间",
       "底盘承重 500 公斤以上",
@@ -231,10 +232,44 @@ const STRENGTH_ITEMS = [
   },
 ];
 
+/* ==================== 热水器福利活动 ==================== */
+const HEATER_PROMOS = [
+  {
+    image: "/images/heater-promo/heater-promo-01.webp",
+    brand: "美的 · 安全王 N6",
+    title: "出水断电 安全无忧",
+    features: ["出水断电", "智能恒温", "多重安全防护"],
+    price: "¥ 750",
+  },
+  {
+    image: "/images/heater-promo/heater-promo-02.webp",
+    brand: "美的 · MD1（60L）",
+    title: "大容量 畅享舒适热水",
+    features: ["60升大容量", "多重安全防护", "爆款热销"],
+    price: "¥ 399",
+  },
+  {
+    image: "/images/heater-promo/heater-promo-03.webp",
+    brand: "美的 · 一级能效",
+    title: "2100W 高效速热更省心",
+    features: ["2100W高功率", "一级能效", "限时抢购"],
+    price: "¥ 680",
+  },
+];
+
+const HEATER_PRODUCTS = [
+  { image: "/images/heater-products/heater-product-01.webp", brand: "海尔", name: "JZ7 双管变频速热", highlights: "双管速热 · 变频节能" },
+  { image: "/images/heater-products/heater-product-02.webp", brand: "美的", name: "纯净活水系列", highlights: "纯净活水 · 健康沐浴" },
+  { image: "/images/heater-products/heater-product-03.webp", brand: "美的", name: "MT7 出水断电", highlights: "出水断电 · 安全守护" },
+  { image: "/images/heater-products/heater-product-04.webp", brand: "海尔", name: "TA5 精智恒温", highlights: "精智恒温 · 持久恒温" },
+  { image: "/images/heater-products/heater-product-05.webp", brand: "海尔", name: "AI 管家 · 3.3kW 速热", highlights: "AI管家 · 3.3kW速热" },
+];
+
 /* ==================== 联系信息（用户可在此修改） ==================== */
 const CONTACT = {
   phone: "150-7669-9400", // 真实电话
   mobile: "150-7669-9400", // 真实手机号（微信同号）
+  backup: "193-3317-2643", // 备用号码
   wechat: "15076699400", // 微信号（同手机号）
   address: "河北省沧州市沧县",
   workTime: "周一至周日 8:00 - 22:00",
@@ -881,6 +916,157 @@ function PromoGallery() {
   );
 }
 
+function HeaterOffer() {
+  return (
+    <section id="heater-offer" className="py-20 md:py-28 bg-gradient-to-b from-neutral-900 to-neutral-800 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs tracking-wider mb-4">
+            🎁 限时福利活动
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tight">
+            晒图推荐 · 享成本价热水器
+          </h2>
+          <p className="text-base md:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+            购买并使用我们洗澡房后，在朋友圈/抖音/小红书等平台晒图分享使用体验，
+            <span className="text-amber-300 font-bold">即可成本价购入一台品牌电热水器</span>。
+            多款美的、海尔等大品牌可选，厂家直供，价格低于市面电商。
+          </p>
+        </div>
+
+        {/* 福利活动三款海报 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {HEATER_PROMOS.map((h, i) => (
+            <div
+              key={i}
+              className="card-hover bg-white text-neutral-900 overflow-hidden border-2 border-amber-500/50"
+            >
+              <div className="img-zoom aspect-[4/3] bg-neutral-100 relative">
+                <img
+                  src={h.image}
+                  alt={`${h.brand} ${h.title}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-3 right-3 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
+                  成本价特惠
+                </div>
+              </div>
+              <div className="p-5">
+                <div className="text-xs text-neutral-500 mb-1 tracking-wider">{h.brand}</div>
+                <h3 className="text-lg font-black mb-3 leading-tight">{h.title}</h3>
+                <ul className="space-y-1.5 text-xs text-neutral-700 mb-4">
+                  {h.features.map((f, j) => (
+                    <li key={j} className="flex items-center gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="border-t border-neutral-200 pt-3 flex items-end justify-between">
+                  <div>
+                    <div className="text-[10px] text-neutral-500">晒图推荐专享价</div>
+                    <div className="text-2xl font-black text-amber-600">{h.price}</div>
+                  </div>
+                  <a href="#contact">
+                    <Button className="rounded-none bg-neutral-900 hover:bg-neutral-700 text-white text-xs">
+                      立即咨询
+                      <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 活动规则 */}
+        <div className="bg-neutral-800/50 border border-neutral-700 p-6 md:p-8 rounded">
+          <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+            <CheckCircle2 className="w-5 h-5 text-amber-400" />
+            活动参与流程
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+            {[
+              { step: "01", title: "购买安装", desc: "选购我们的洗澡房，安排上门安装" },
+              { step: "02", title: "晒图分享", desc: "在朋友圈/抖音/小红书分享使用体验" },
+              { step: "03", title: "联系客服", desc: "截图发给客服，确认参与活动" },
+              { step: "04", title: "成本价购机", desc: "从下方多款热水器中任选一台" },
+            ].map((s, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-amber-500 text-white grid place-items-center font-black text-sm shrink-0">
+                  {s.step}
+                </div>
+                <div>
+                  <div className="font-bold text-white mb-1">{s.title}</div>
+                  <div className="text-xs text-neutral-400 leading-relaxed">{s.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 pt-5 border-t border-neutral-700 text-xs text-neutral-500 leading-relaxed">
+            * 同一用户限参与一次。最终解释权归商家所有。热水器型号以实际库存为准，可与客服确认可选款式。
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HeaterProducts() {
+  return (
+    <section id="heater-products" className="py-20 md:py-28 bg-neutral-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          eyebrow="Premium Water Heaters"
+          title="多款高端变频热水器 · 厂家直销"
+          desc="另有海尔、美的等大品牌多款高端变频热水器供您选择，厂家直销，价格最低，品质有保障。"
+        />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {HEATER_PRODUCTS.map((h, i) => (
+            <div
+              key={i}
+              className="card-hover bg-white border border-neutral-200 overflow-hidden"
+            >
+              <div className="img-zoom aspect-[4/3] bg-neutral-100">
+                <img
+                  src={h.image}
+                  alt={`${h.brand} ${h.name}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <div className="text-[10px] tracking-[0.2em] uppercase text-neutral-500 mb-1">
+                  {h.brand}
+                </div>
+                <h3 className="text-sm font-bold text-neutral-900 mb-1 leading-tight">
+                  {h.name}
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  {h.highlights}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <a href="#contact">
+            <Button
+              size="lg"
+              className="rounded-none bg-neutral-900 hover:bg-neutral-700 text-white px-8"
+            >
+              咨询完整型号与价格
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </a>
+          <div className="mt-4 text-xs text-neutral-500">
+            * 全部厂家直销，价格优于电商公开价。具体优惠请咨询客服。
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   const qrItems = [
     {
@@ -889,6 +1075,13 @@ function Contact() {
       image: "/images/qr/wechat-qr.png",
       icon: MessageCircle,
       account: `微信号：${CONTACT.wechat}`,
+    },
+    {
+      label: "快手号",
+      desc: "扫码关注官方快手",
+      image: "/images/qr/kuaishou-qr.png",
+      icon: QrCode,
+      account: "快手号：BATHLUXE 官方",
     },
     {
       label: "抖音号",
@@ -966,6 +1159,26 @@ function Contact() {
                 </div>
               </a>
 
+              <a
+                href={`tel:${CONTACT.backup}`}
+                className="flex items-start gap-4 p-5 bg-neutral-800/50 border border-neutral-700 hover:bg-neutral-800 transition group"
+              >
+                <div className="w-12 h-12 rounded-full bg-white text-neutral-900 grid place-items-center group-hover:scale-110 transition shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs text-neutral-400 mb-1">
+                    备用号码（点击拨打）
+                  </div>
+                  <div className="text-xl font-bold tracking-wide">
+                    {CONTACT.backup}
+                  </div>
+                  <div className="text-xs text-neutral-400 mt-1">
+                    主号不接请打此号
+                  </div>
+                </div>
+              </a>
+
               <div className="flex items-start gap-4 p-5 bg-neutral-800/50 border border-neutral-700">
                 <div className="w-12 h-12 rounded-full bg-white text-neutral-900 grid place-items-center shrink-0">
                   <MapPin className="w-5 h-5" />
@@ -983,13 +1196,13 @@ function Contact() {
           {/* 右：二维码 */}
           <div>
             <h3 className="text-2xl font-bold mb-8">扫码关注我们</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {qrItems.map((q, i) => {
                 const Icon = q.icon;
                 return (
                   <div
                     key={i}
-                    className="bg-white p-5 text-neutral-900 text-center card-hover"
+                    className="bg-white p-4 text-neutral-900 text-center card-hover"
                   >
                     <div className="w-10 h-10 mx-auto mb-3 rounded-full bg-neutral-900 text-white grid place-items-center">
                       <Icon className="w-4 h-4" />
@@ -1154,6 +1367,8 @@ export default function Home() {
         <Models />
         <Scenes />
         <PromoGallery />
+        <HeaterOffer />
+        <HeaterProducts />
         <Contact />
       </main>
       <Footer />
