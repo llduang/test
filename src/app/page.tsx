@@ -384,6 +384,8 @@ function Hero() {
           src="/images/scenes/scene-01.webp"
           alt="BATHLUXE 沐浴房高端浴室场景"
           className="w-full h-full object-cover"
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 hero-overlay" />
       </div>
@@ -527,7 +529,7 @@ function ProductShowcase() {
                     src={img}
                     alt={`BATHLUXE 洗澡房实物图 ${i + 1}`}
                     className="w-full h-full object-cover"
-                  />
+                   loading="lazy" decoding="async" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                 </div>
               </DialogTrigger>
@@ -539,7 +541,7 @@ function ProductShowcase() {
                   src={img}
                   alt={`BATHLUXE 洗澡房实物图 ${i + 1}`}
                   className="w-full h-auto"
-                />
+                 loading="lazy" decoding="async" />
               </DialogContent>
             </Dialog>
           ))}
@@ -574,7 +576,7 @@ function ProductDetails() {
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="lg:[direction:ltr]">
                   <div className="flex items-center gap-3 mb-4">
@@ -671,7 +673,7 @@ function Strength() {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
-                />
+                 loading="lazy" decoding="async" />
               </div>
               <div className="p-6 md:p-8">
                 <h3 className="text-xl md:text-2xl font-black text-neutral-900 mb-3">
@@ -720,7 +722,7 @@ function Models() {
                     src={m.image}
                     alt={m.name}
                     className="w-full h-full object-cover"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 {/* 右侧介绍 */}
                 <div className="p-6 md:p-7 flex flex-col">
@@ -815,7 +817,7 @@ function Scenes() {
                   src={s.image}
                   alt={s.title}
                   className="w-full h-full object-cover"
-                />
+                 loading="lazy" decoding="async" />
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-neutral-900 mb-2">
@@ -852,7 +854,7 @@ function PromoGallery() {
               src={PROMOS[active].image}
               alt={PROMOS[active].title}
               className="w-full h-full object-cover"
-            />
+             loading="lazy" decoding="async" />
           </div>
           <div className="flex flex-col justify-center p-6 lg:p-8 bg-neutral-900 text-white">
             <div className="text-xs tracking-[0.3em] uppercase text-neutral-500 mb-3">
@@ -907,7 +909,7 @@ function PromoGallery() {
                 src={p.image}
                 alt={p.title}
                 className="w-full h-full object-cover"
-              />
+               loading="lazy" decoding="async" />
             </button>
           ))}
         </div>
@@ -946,7 +948,7 @@ function HeaterOffer() {
                   src={h.image}
                   alt={`${h.brand} ${h.title}`}
                   className="w-full h-full object-cover"
-                />
+                 loading="lazy" decoding="async" />
                 <div className="absolute top-3 right-3 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
                   成本价特惠
                 </div>
@@ -1032,7 +1034,7 @@ function HeaterProducts() {
                   src={h.image}
                   alt={`${h.brand} ${h.name}`}
                   className="w-full h-full object-cover"
-                />
+                 loading="lazy" decoding="async" />
               </div>
               <div className="p-4">
                 <div className="text-[10px] tracking-[0.2em] uppercase text-neutral-500 mb-1">
@@ -1216,7 +1218,7 @@ function Contact() {
                         src={q.image}
                         alt={q.label}
                         className="w-full h-full object-contain"
-                      />
+                       loading="lazy" decoding="async" />
                     </div>
                     <div className="text-[10px] text-neutral-600 break-all">
                       {q.account}

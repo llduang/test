@@ -40,6 +40,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
+      <head>
+        {/* 预加载首屏关键图片，让浏览器在解析 HTML 时就发起请求 */}
+        <link rel="preload" as="image" href="/images/scenes/scene-01.webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/products/product-01.webp" />
+        <link rel="preload" as="image" href="/images/products/product-02.webp" />
+        <link rel="preload" as="image" href="/images/products/product-03.webp" />
+        <link rel="preload" as="image" href="/images/products/product-04.webp" />
+        <link rel="preload" as="image" href="/images/products/product-05.webp" />
+      </head>
       <body
         className={`${notoSansSC.variable} font-sans antialiased bg-background text-foreground`}
       >
