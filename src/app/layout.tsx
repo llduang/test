@@ -48,6 +48,18 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/images/products/product-03.webp" />
         <link rel="preload" as="image" href="/images/products/product-04.webp" />
         <link rel="preload" as="image" href="/images/products/product-05.webp" />
+        <link rel="preload" as="image" href="/images/products/product-06.webp" />
+        <link rel="preload" as="image" href="/images/products/product-07.webp" />
+        <link rel="preload" as="image" href="/images/products/product-08.webp" />
+        <link rel="preload" as="image" href="/images/products/product-09.webp" />
+        <link rel="preload" as="image" href="/images/products/product-10.webp" />
+        <link rel="preload" as="image" href="/images/scenes/scene-02.webp" />
+        <link rel="preload" as="image" href="/images/scenes/scene-03.webp" />
+        <link rel="preload" as="image" href="/images/scenes/scene-04.webp" />
+        <link rel="preload" as="image" href="/images/qr/wechat-qr.png" />
+        <link rel="preload" as="image" href="/images/qr/kuaishou-qr.png" />
+        <link rel="preload" as="image" href="/images/qr/douyin-qr.png" />
+        <link rel="preload" as="image" href="/images/qr/xiaohongshu-qr.png" />
       </head>
       <body
         className={`${notoSansSC.variable} font-sans antialiased bg-background text-foreground`}
